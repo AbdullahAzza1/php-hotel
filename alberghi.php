@@ -40,14 +40,8 @@ $hotels = [
 
 ];
 
-foreach ($hotels as $key => $value) {
-    if ($key == 'name') {
-        echo $value;
-    } 
-}
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +50,13 @@ foreach ($hotels as $key => $value) {
     <title>Document</title>
 </head>
 <body>
-    <div> <?php $value ?></div>
+    <div> <?php foreach ($hotels as $key => $value) {
+    if ($key == 'name') {
+        echo $value;
+    } 
+}
+
+?> </div>
 </body>
 </html>
 
