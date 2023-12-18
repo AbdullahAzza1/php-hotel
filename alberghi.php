@@ -40,8 +40,10 @@ $hotels = [
 
 ];
 
-foreach ($hotels as $albergo) {
-    echo $albergo;
+foreach ($hotels as $key => $value) {
+    if (?key == 'name') {
+        echo $value;
+    }
 }
 
 ?>
@@ -54,7 +56,7 @@ foreach ($hotels as $albergo) {
     <title>Document</title>
 </head>
 <body>
-    <div> <?php $albergo ?></div>
+    <div> <?php $value ?></div>
 </body>
 </html>
 
