@@ -41,9 +41,9 @@ $hotels = [
 ];
 
 foreach ($hotels as $key => $value) {
-    if (?key == 'name') {
+    if ($key == 'name') {
         echo $value;
-    }
+    } 
 }
 
 ?>
