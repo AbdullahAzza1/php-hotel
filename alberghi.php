@@ -38,25 +38,41 @@ $hotels = [
         'distance_to_center' => 50
     ],
 
-];
+]
 
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div> <?php foreach ($hotels as $key => $value) {
-    if ($key == 'name') {
-        echo $value;
-    } 
-}
+    <ul>
+        <?php
+        foreach ($hotels as $hotel) {
+            echo "<li>" . $hotel['name'] . "</li>";
+            echo "<li>" . $hotel['description'] . "</li>";
+            echo "<li>" . $hotel['vote'] . "</li>";
+            echo "<li>" . $hotel['distance_to_center'] . "km</li>";
+        }
+        ?>
+    </ul>
 
-?> </div>
+
+    <!-- <div> 
+        <?php foreach ($hotels as $key => $value) {
+            echo '$key: ' . $key;
+            echo "<br />";
+            echo '$value: ';
+            print_r($value);
+        }
+        ?> 
+</div> -->
 </body>
-</html>
 
+</html>
